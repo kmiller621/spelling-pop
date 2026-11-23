@@ -139,6 +139,17 @@
 
             <!-- Category Grid -->
             <div class="grid grid-cols-1 gap-2.5 max-h-[58vh] overflow-y-auto pr-1">
+                <button onclick="selectCategory('heartWords')" class="bg-white hover:bg-rose-50 border-2 border-rose-300 p-3.5 rounded-2xl shadow-sm flex items-center justify-between active:scale-98 transition">
+                    <div class="flex items-center gap-3">
+                        <span class="text-3xl">❤️</span>
+                        <div class="text-left">
+                            <h3 class="font-bubble text-rose-700 text-base">Tricky Heart Words (41 words)</h3>
+                            <p class="text-xs text-gray-500">the, she, was, what, where, once, could, because...</p>
+                        </div>
+                    </div>
+                    <span class="text-xl">➡️</span>
+                </button>
+
                 <button onclick="selectCategory('longO')" class="bg-white hover:bg-amber-50 border-2 border-amber-200 p-3.5 rounded-2xl shadow-sm flex items-center justify-between active:scale-98 transition">
                     <div class="flex items-center gap-3">
                         <span class="text-3xl">🍩</span>
@@ -269,6 +280,7 @@
             
             <!-- Scrollable Horizontal Quick-Category Switcher -->
             <div id="quickCategoryBar" class="w-full flex items-center gap-1.5 overflow-x-auto pb-2 mb-2 no-scrollbar">
+                <button onclick="selectCategory('heartWords')" data-cat="heartWords" class="cat-pill shrink-0 px-3 py-1.5 rounded-full text-xs font-bold bg-white/80 text-gray-700 border border-white shadow-sm transition">❤️ Heart Words</button>
                 <button onclick="selectCategory('longO')" data-cat="longO" class="cat-pill shrink-0 px-3 py-1.5 rounded-full text-xs font-bold bg-white/80 text-gray-700 border border-white shadow-sm transition">🍩 Long O</button>
                 <button onclick="selectCategory('longI')" data-cat="longI" class="cat-pill shrink-0 px-3 py-1.5 rounded-full text-xs font-bold bg-white/80 text-gray-700 border border-white shadow-sm transition">🐯 Long I</button>
                 <button onclick="selectCategory('longA')" data-cat="longA" class="cat-pill shrink-0 px-3 py-1.5 rounded-full text-xs font-bold bg-white/80 text-gray-700 border border-white shadow-sm transition">🎂 Long A</button>
@@ -402,6 +414,22 @@
 
         // COMPLETE DATASETS FROM ALL SHEETS
         const WORD_DATA = {
+            heartWords: [
+                { word: 'the', emoji: '👑' }, { word: 'she', emoji: '👧' }, { word: 'he', emoji: '👦' },
+                { word: 'we', emoji: '👫' }, { word: 'be', emoji: '🐝' }, { word: 'me', emoji: '🙋‍♀️' },
+                { word: 'was', emoji: '⏳' }, { word: 'of', emoji: '📦' }, { word: 'a', emoji: '🅰️' },
+                { word: 'do', emoji: '✅' }, { word: 'to', emoji: '➡️' }, { word: 'down', emoji: '⬇️' },
+                { word: 'how', emoji: '🤔' }, { word: 'what', emoji: '❓' }, { word: 'where', emoji: '📍' },
+                { word: 'why', emoji: '🤷‍♀️' }, { word: 'from', emoji: '✉️' }, { word: 'once', emoji: '1️⃣' },
+                { word: 'one', emoji: '☝️' }, { word: 'two', emoji: '2️⃣' }, { word: 'could', emoji: '💭' },
+                { word: 'should', emoji: '🧭' }, { word: 'would', emoji: '🌟' }, { word: 'there', emoji: '👉' },
+                { word: 'said', emoji: '💬' }, { word: 'says', emoji: '🗣️' }, { word: 'word', emoji: '📝' },
+                { word: 'because', emoji: '💡' }, { word: 'you', emoji: '🫵' }, { word: 'your', emoji: '🎒' },
+                { word: 'my', emoji: '💖' }, { word: 'by', emoji: '🛤️' }, { word: 'have', emoji: '🤲' },
+                { word: 'all', emoji: '🌍' }, { word: 'who', emoji: '🦉' }, { word: 'are', emoji: '✨' },
+                { word: 'were', emoji: '🕰️' }, { word: 'some', emoji: '🍪' }, { word: 'come', emoji: '🏃‍♀️' },
+                { word: 'they', emoji: '👥' }, { word: 'their', emoji: '🏠' }
+            ],
             longO: [
                 { word: 'home', emoji: '🏠' }, { word: 'nose', emoji: '👃' }, { word: 'rope', emoji: '🪢' },
                 { word: 'cone', emoji: '🍦' }, { word: 'stone', emoji: '🪨' }, { word: 'go', emoji: '🟢' },
